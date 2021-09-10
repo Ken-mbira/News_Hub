@@ -1,5 +1,6 @@
-from app import app
-from app import views
+from app import create_app
+
+myApp = create_app()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    myApp.run(debug=True)
