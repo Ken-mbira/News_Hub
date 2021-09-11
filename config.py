@@ -1,10 +1,12 @@
+from instance.config import NEWS_API_KEY
 import os
 
 class Config:
     """
     This is the parent configuration class that contains the main configurations that are to work on the application
     """
-    NEWS_API_KEY = os.environ.get('NEWS_API')
+    NEWS_API = NEWS_API_KEY
+    BASE_URL = 'https://newsapi.org/v2/{}?q=popular&apiKey={}'
 
 class ProdConfig(Config):
     """
