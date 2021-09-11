@@ -1,3 +1,4 @@
+from app.request import configure_request
 from flask import Flask
 from .news import news,views
 from config import config_options
@@ -7,5 +8,6 @@ def create_app(config_name):
 
     app.register_blueprint(news)
     app.config.from_object(config_options[config_name])
+    configure_request(app)
 
     return app

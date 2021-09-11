@@ -4,7 +4,7 @@ class Config:
     """
     This is the parent configuration class that contains the main configurations that are to work on the application
     """
-    pass
+    NEWS_API_KEY = os.environ.get('NEWS_API')
 
 class ProdConfig(Config):
     """
