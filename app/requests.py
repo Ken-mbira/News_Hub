@@ -1,5 +1,3 @@
-from os import name
-from test_source import SourceTest
 import urllib.request,json
 
 from .models import Source,Article
