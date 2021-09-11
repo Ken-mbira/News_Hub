@@ -1,5 +1,4 @@
 from instance.config import NEWS_API_KEY
-import os
 
 class Config:
     """
