@@ -106,5 +106,31 @@
     {% endfor %}
 </div>
 
-
+<!-- Sports -->
+<div class="card mb-3" style="max-width: 100vw;">
+    <div class="row g-0">
+        <div class="col-md-5">
+            <div class="card-body">
+                <h5 class="card-title">{{ football[2].title}}</h5>
+                <p class="card-text">{{ football[2].descrtiption }}</p>
+                <p class="card-text"><small class="text-muted">{{ football[2].published }}</small></p>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <img src="{{ football[2].image_url }}" class="img-fluid" alt="...">
+        </div>
+    </div>
+</div>
+<div class="container-fluid row" style="display: flex; justify-content: center;">
+    {% for article in football %}
+    <div class=" col-md-3 card mb-3">
+        <img src="{{ article.image_url }}" class="img-fluid" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ article.title }}</h5>
+            <p class="card-text">{{ article.description}}</p>
+            <p class="card-text"><small class="text-muted">{{ article.published }}</small></p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}

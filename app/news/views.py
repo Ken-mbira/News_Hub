@@ -8,4 +8,5 @@ def index():
     sources = get_sources()
     covid = get_articles('covid')
     headlines = get_articles('popular')
-    return render_template('index.html',sources = sources, title = title, covid = covid,headlines = headlines) 
+    football = get_articles('football')
+    return render_template('index.html',football = football,sources = sources, title = title, covid = covid,headlines = headlines) 
