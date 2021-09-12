@@ -5,7 +5,7 @@ class Config:
     This is the parent configuration class that contains the main configurations that are to work on the application
     """
     NEWS_API = NEWS_API_KEY
-    BASE_URL = 'https://newsapi.org/v2/{}?q=popular&apiKey={}'
+    BASE_URL = 'https://newsapi.org/v2/{}?q={}&apiKey={}'
 
 class ProdConfig(Config):
     """

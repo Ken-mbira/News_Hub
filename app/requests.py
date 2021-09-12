@@ -20,7 +20,7 @@ def get_sources():
     """
     This will find the major headlines
     """
-    get_headlines_url = BASE_URL.format('top-headlines/sources',NEWS_API)
+    get_headlines_url = BASE_URL.format('top-headlines/sources','popular',NEWS_API)
 
     with urllib.request.urlopen(get_headlines_url) as url:
         get_headline_data = url.read()
@@ -51,3 +51,47 @@ def process_sources(result_list):
         sources_list.append(new_source)
 
     return sources_list
+
+def get_articles(query):
+    """
+    This will find the major headlines depending on the query passed
+
+    Args: 
+        query: This is a query to be passed into the function to filter the search
+
+    Returns: A list of results
+    """
+    get_headlines_url = BASE_URL.format('top-headlines',query,NEWS_API)
+
+    with urllib.request.urlopen(get_headlines_url) as url:
+        get_headline_data = url.read()
+        get_headline_response = json.loads(get_headline_data)['articles']
+        result = process_articles(get_headline_response)
+    return result
+
+def process_articles(result_list):
+    """
+    Function that processes the results into the object with the properties we require
+    
+    Args: 
+        result_list: This is the result after getting the url response
+        
+    Returns: A list of objects that only has the required properties
+    """
+    articles_list = []
+
+    for article in result_list:
+        source = article['source']['name']
+        author = article['author']
+        title = article['title']
+        description = article['description']
+        link = article['url']
+        image_url = article['urlToImage']
+        published = article['publishedAt']
+
+        new_article = Article(source,author,title,description,link,image_url,published)
+
+        articles_list.append(new_article)
+
+    return articles_list
+
