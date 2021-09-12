@@ -87,9 +87,9 @@
 </div>
 
 <!-- Headlines -->
-<div class="container-fluid row">
+<div class="container-fluid row" style="display: flex; justify-content: center;">
     {% for headline in headlines%}
-    <div class="col-md card mb-3" style="max-width: 540px; margin:10px;">
+    <div class="col-md-6 card mb-3" style="max-width: 540px; margin:10px;">
         <div class="row g-0">
             <div class="col-md-4">
                 <img src="{{ headline.image_url }}" class="img-fluid rounded-start" alt="...">

@@ -7,5 +7,5 @@ def index():
     title = 'NEWS_HUB'
     sources = get_sources()
     covid = get_articles('covid')
-    headlines = get_articles('politics')
+    headlines = get_articles('popular')
     return render_template('index.html',sources = sources, title = title, covid = covid,headlines = headlines) 
