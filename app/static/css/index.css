@@ -1,0 +1,17 @@
+* {
+    font-family: 'Kaisei Tokumin', serif;
+}
+
+.top-sources {
+    text-align: center;
+}
+
+.source-title {
+    height: 400px;
+    font-size: 20vmin;
+    background-color: #c4c4c4;
+}
+
+.source-info {
+    text-align: left;
+}
