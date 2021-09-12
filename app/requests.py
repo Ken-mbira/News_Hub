@@ -89,9 +89,9 @@ def process_articles(result_list):
         image_url = article['urlToImage']
         published = article['publishedAt']
 
-        new_article = Article(source,author,title,description,link,image_url,published)
-
-        articles_list.append(new_article)
+        if image_url:
+            new_article = Article(source,author,title,description,link,image_url,published)
+            articles_list.append(new_article)
 
     return articles_list
 
