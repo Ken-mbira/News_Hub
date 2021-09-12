@@ -2,7 +2,7 @@ class Source:
     """
     This will define everything to do with sources
     """
-    def __init__(self,id,name,description,category,country):
+    def __init__(self,id,name,description,category,country,link):
         """
         This will define all the properties of the source class
         
@@ -18,6 +18,7 @@ class Source:
         self.description = description
         self.category = category
         self.country = country
+        self.link = link
 
 class Article:
     """

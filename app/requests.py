@@ -45,8 +45,9 @@ def process_sources(result_list):
         description = source['description']
         category = source['category']
         country = source['country']
+        link = source['url']
 
-        new_source = Source(id,name,description,category,country)
+        new_source = Source(id,name,description,category,country,link)
 
         sources_list.append(new_source)
 

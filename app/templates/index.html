@@ -9,27 +9,33 @@
     </div>
     <div class="carousel-inner" style="text-align: center;">
         <div class="carousel-item active" data-bs-interval="10000">
-            <div class="source-title">
-                {{ sources[0].name}}
-            </div>
+            <a href="{{ sources[0].link }}" style="color: #000;">
+                <div class="source-title">
+                    {{ sources[0].name}}
+                </div>
+            </a>
             <div class="carousel-caption d-none d-md-block source-info">
                 <h5>{{ sources[0].description}}</h5>
                 <p>{{ sources[0].country}}</p>
             </div>
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-            <div class="source-title">
-                {{ sources[1].name}}
-            </div>
+            <a href="{{ sources[1].link}}" style="color: #000;">
+                <div class="source-title">
+                    {{ sources[1].name}}
+                </div>
+            </a>
             <div class="carousel-caption d-none d-md-block source-info">
                 <h5>{{ sources[1].description}}</h5>
                 <p>{{ sources[1].country}}</p>
             </div>
         </div>
         <div class="carousel-item">
-            <div class="source-title">
-                {{ sources[2].name}}
-            </div>
+            <a href="{{ sources[2].link }}" style="color: #000;">
+                <div class="source-title">
+                    {{ sources[2].name}}
+                </div>
+            </a>
             <div class="carousel-caption d-none d-md-block source-info">
                 <h5>{{ sources[2].description}}</h5>
                 <p>{{ sources[2].country}}</p>
@@ -55,21 +61,27 @@
     </div>
     <div class="carousel-inner" style="text-align: center;">
         <div class="carousel-item active article-title" data-bs-interval="10000">
-            <img src="{{ covid[0].image_url }}" alt="{{ covid[0].title}}" class="img-fluid w-75">
+            <a href="{{ covid[0].link }}">
+                <img src="{{ covid[0].image_url }}" alt="{{ covid[0].title}}" class="img-fluid w-75">
+            </a>
             <div class="carousel-caption d-none d-md-block source-info" style="color: white;">
                 <h5>{{ covid[0].title}}</h5>
                 <p>{{ covid[0].description}}</p>
             </div>
         </div>
         <div class="carousel-item article-title" data-bs-interval="2000">
-            <img src="{{ covid[1].image_url }}" alt="{{ covid[1].title}}" class="img-fluid w-75">
+            <a href="{{ covid[1].link }}">
+                <img src="{{ covid[1].image_url }}" alt="{{ covid[1].title}}" class="img-fluid w-75">
+            </a>
             <div class="carousel-caption d-none d-md-block source-info" style="color: white;">
                 <h5>{{ covid[1].title}}</h5>
                 <p>{{ covid[1].description}}</p>
             </div>
         </div>
         <div class="carousel-item article-title">
-            <img src="{{ covid[2].image_url }}" alt="{{ covid[2].title}}" class="img-fluid w-75">
+            <a href="{{ covid[2].link }}">
+                <img src="{{ covid[2].image_url }}" alt="{{ covid[2].title}}" class="img-fluid w-75">
+            </a>
             <div class="carousel-caption d-none d-md-block source-info" style="color: white;">
                 <h5>{{ covid[2].title}}</h5>
                 <p>{{ covid[2].description}}</p>
@@ -87,21 +99,23 @@
 </div>
 
 <!-- Headlines -->
-<div class="container-fluid row" style="display: flex; justify-content: center;">
+<div class="container-fluid row card-group" style="display: flex; justify-content: center;">
     {% for headline in headlines%}
     <div class="col-md-6 card mb-3" style="max-width: 540px; margin:10px;">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="{{ headline.image_url }}" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">{{ headline.title }}</h5>
-                    <p class="card-text">{{ headline.description}}</p>
-                    <p class="card-text"><small class="text-muted">{{ headline.published }}</small></p>
+        <a href="{{ headline.link }}" style="color: #000; text-decoration: none;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{{ headline.image_url }}" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ headline.title }}</h5>
+                        <p class="card-text">{{ headline.description}}</p>
+                        <p class="card-text"><small class="text-muted">{{ headline.published }}</small></p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
     </div>
     {% endfor %}
 </div>
@@ -111,9 +125,11 @@
     <div class="row g-0">
         <div class="col-md-5">
             <div class="card-body">
-                <h5 class="card-title">{{ football[2].title}}</h5>
-                <p class="card-text">{{ football[2].descrtiption }}</p>
-                <p class="card-text"><small class="text-muted">{{ football[2].published }}</small></p>
+                <a href="{{ football[2].link }}" style="text-decoration: none; color: #000;">
+                    <h5 class="card-title">{{ football[2].title}}</h5>
+                    <p class="card-text">{{ football[2].descrtiption }}</p>
+                    <p class="card-text"><small class="text-muted">{{ football[2].published }}</small></p>
+                </a>
             </div>
         </div>
         <div class="col-md-7">
@@ -124,12 +140,14 @@
 <div class="container-fluid row" style="display: flex; justify-content: center;">
     {% for article in football %}
     <div class=" col-md-3 card mb-3">
-        <img src="{{ article.image_url }}" class="img-fluid" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">{{ article.title }}</h5>
-            <p class="card-text">{{ article.description}}</p>
-            <p class="card-text"><small class="text-muted">{{ article.published }}</small></p>
-        </div>
+        <a href="{{ article.link }}" style="color: #000; text-decoration: none;">
+            <img src="{{ article.image_url }}" class="img-fluid" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ article.title }}</h5>
+                <p class="card-text">{{ article.description}}</p>
+                <p class="card-text"><small class="text-muted">{{ article.published }}</small></p>
+            </div>
+        </a>
     </div>
     {% endfor %}
 </div>
