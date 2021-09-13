@@ -13,7 +13,7 @@ class SourceTest(unittest.TestCase):
         """
         This function will run before every test case does
         """
-        self.new_source = Source("cnn",'CNN','Your dedicated news source','general','US')
+        self.new_source = Source("cnn",'CNN','Your dedicated news source','general','US',"link")
 
     def test_init(self):
         """
@@ -46,6 +46,3 @@ class ArticleTest(unittest.TestCase):
         """
         self.new_article.save_article()
         self.assertEqual(len(Article.article_findings),1)
-
-if __name__ == '__main__':
-    unittest.main()
