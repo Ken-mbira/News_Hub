@@ -12,10 +12,10 @@ def index():
 
     search_article = request.args.get('article_search')
 
-    # if search_article:
-    #     return redirect(url_for('news.search',article_name = search_article))
-    # else:
-    return render_template('index.html',football = football,sources = sources, title = title, covid = covid,headlines = headlines) 
+    if search_article:
+        return redirect(url_for('news.search',article_name = search_article))
+    else:
+        return render_template('index.html',football = football,sources = sources, title = title, covid = covid,headlines = headlines) 
 
 @news.route('/search/<article_name>')
 def search(article_name):
