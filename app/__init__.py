@@ -2,7 +2,7 @@ from flask_bootstrap import Bootstrap
 
 from app.requests import configure_request
 from flask import Flask
-from .news import news,views
+from .news import news,views,error
 from config import config_options
 
 bootstrap = Bootstrap()
