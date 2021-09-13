@@ -39,6 +39,9 @@ To have the repo locally on your machine:
 # App Description
 The application consumes the NEWS_API to get news from a variety of news sources and according to queries that are passed in via the views.py file, filters the data and brings back only the specified data. This application shows different categories of news on the home page and has a functionality where the user can search for a specific area of interest in which case they are redirected to the search page where they view their results in a list of cards
 
+# Link to live site
+To view the deployed application click [here](https://news-galore.herokuapp.com/)
+
 # Known Bugs
 The application has been deployed to heroku but is currently not functional. I am still working out the reason for this. Feel free to point out the error if you can see it from your side.
 
