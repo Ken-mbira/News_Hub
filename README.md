@@ -42,9 +42,6 @@ The application consumes the NEWS_API to get news from a variety of news sources
 # Link to live site
 To view the deployed application click [here](https://news-galore.herokuapp.com/)
 
-# Known Bugs
-The application has been deployed to heroku but is currently not functional. I am still working out the reason for this. Feel free to point out the error if you can see it from your side.
-
 # Future Improvements
 In the future I would like to implements a subscription functionality where a user can have an account and by doing so have special features in their application.
 
